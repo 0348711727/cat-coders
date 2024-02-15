@@ -8,15 +8,14 @@
         <span class="fa fa-bars text-primary"></span>
       </button>
       <div class="collapse navbar-collapse">
-        <ul class="d-flex jutify-content-between">
-          <li (click)="navigateTo('')" class="nav-item nav-link">Home</li>
-          <li (click)="navigateTo('about')" class="nav-item nav-link">About</li>
-          <li (click)="navigateTo('services')" class="nav-item nav-link">Services</li>
-          <li (click)="navigateTo('events')" class="nav-item nav-link">Events</li>
-          <li (click)="navigateTo('menu')" class="nav-item nav-link active">Menu</li>
-          <li (click)="navigateTo('contacts')" class="nav-item nav-link">Contact</li>
+        <ul *ngFor="let navbar of listNavbar" class="d-flex jutify-content-between">
+          <li (click)="navigateTo(navbar['url'])" class="nav-item nav-link">{{navbar['title']}}</li>
         </ul>
       </div>
+      <button class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex"
+        data-bs-toggle="modal" data-bs-target="#searchModal"><mat-icon>search</mat-icon></button>
+      <span (click)="navigateTo('book-now')"
+        class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill">Book Now</span>
     </nav>
   </div>
 </div>
