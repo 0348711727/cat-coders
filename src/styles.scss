@@ -1,1 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+@import 'bootstrap/scss/bootstrap';
+@import './app/commons/variable';
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+// Define a mixin with placeholders for uniquifier and weight
+@mixin dancing-script($uniquifier, $weight) {
+  .dancing-script-#{$uniquifier} {
+    font-family: "Dancing Script", cursive;
+    font-optical-sizing: auto;
+    font-weight: $weight;
+    font-style: normal;
+  }
+}
