@@ -1,0 +1,18 @@
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
+<svg width="256px" height="256px" viewBox="0 0 512.00 512.00" id="icons" xmlns="http://www.w3.org/2000/svg" fill="#000000" stroke="#000000" transform="matrix(1, 0, 0, 1, 0, 0)rotate(0)">
+<g id="SVGRepo_bgCarrier" stroke-width="0">
+<path transform="translate(0, 0), scale(32)" fill="#000000" d="M9.166.33a2.25 2.25 0 00-2.332 0l-5.25 3.182A2.25 2.25 0 00.5 5.436v5.128a2.25 2.25 0 001.084 1.924l5.25 3.182a2.25 2.25 0 002.332 0l5.25-3.182a2.25 2.25 0 001.084-1.924V5.436a2.25 2.25 0 00-1.084-1.924L9.166.33z" strokewidth="0"/>
+</g>
+<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
+<g id="SVGRepo_iconCarrier">
+<defs>
+<style>.cls-1{fill:none;stroke:#ffffff;stroke-miterlimit:10;stroke-width:25.6;}</style>
+</defs>
+<path class="cls-1" d="M324.5,282.26c-11.49-19.8-36.22-33.5-64.9-33.5s-53.41,13.7-64.9,33.5c-20.53,9.58-33.5,23.62-33.5,39.28,0,28.87,44.05,52.27,98.4,52.27s98.4-23.4,98.4-52.27c0-15.66-12.97-29.7-33.5-39.28Z"/>
+<ellipse class="cls-1" cx="295.77" cy="176.77" rx="38.75" ry="29.72" transform="translate(55.53 423.78) rotate(-76.66)"/>
+<ellipse class="cls-1" cx="212.93" cy="176.77" rx="29.72" ry="38.75" transform="translate(-35.04 53.89) rotate(-13.34)"/>
+<ellipse class="cls-1" cx="148.91" cy="240.32" rx="26.12" ry="34.05" transform="translate(-100.21 106.65) rotate(-30)"/>
+<ellipse class="cls-1" cx="363.09" cy="231.51" rx="34.05" ry="26.12" transform="translate(-18.94 430.2) rotate(-60)"/>
+</g>
+</svg>

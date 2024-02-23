@@ -4,5 +4,7 @@
   "SERVICES": "Services",
   "EVENTS": "Events",
   "CONTACT": "Contact",
-  "MENU": "Menu"
+  "MENU": "Menu",
+  "SEARCH": "Search",
+  "BOOK_NOW": "Book Now"
 }

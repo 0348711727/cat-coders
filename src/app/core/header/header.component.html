@@ -4,18 +4,33 @@
       <h1 class="text-primary fw-bold mb-0"><span (click)="navigateTo('/')"
           class="text-dark dancing-script-logo cursor-pointer">Cat
           Coders</span> </h1>
-      <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="fa fa-bars text-primary"></span>
+      <button (click)="toggleMenu()" class="navbar-toggler py-2 px-3 outline-none" type="button"
+        data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <mat-icon>menu</mat-icon>
       </button>
-      <div class="collapse navbar-collapse">
-        <ul *ngFor="let navbar of listNavbar" class="d-flex jutify-content-between">
-          <li (click)="navigateTo(navbar['url'])" class="nav-item nav-link">{{navbar['title']}}</li>
+      <div class="collapse navbar-collapse" id="menu" [class.show]="isMenuOpen">
+        <ul *ngFor="let navbar of listNavbar" class="d-flex jutify-content-between ml-auto navbar-nav">
+          <li (click)="navigateTo(navbar['url'])" [ngClass]="{'active': currentUrl===navbar['url']}"
+            class="nav-item nav-link">
+            {{navbar['title']}}</li>
         </ul>
       </div>
-      <button class="btn-search btn btn-primary btn-md-square me-4 rounded-circle d-none d-lg-inline-flex"
-        data-bs-toggle="modal" data-bs-target="#searchModal"><mat-icon>search</mat-icon></button>
-      <span (click)="navigateTo('book-now')"
-        class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill">Book Now</span>
+
+      <div class="input-wrapper d-none d-xl-inline-block">
+        <button class="icon" (click)="search()">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" height="20px" width="20px">
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#000"
+              d="M11.5 21C16.7467 21 21 16.7467 21 11.5C21 6.25329 16.7467 2 11.5 2C6.25329 2 2 6.25329 2 11.5C2 16.7467 6.25329 21 11.5 21Z">
+            </path>
+            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="1.5" stroke="#000" d="M22 22L20 20">
+            </path>
+          </svg>
+        </button>
+        <input [placeholder]="'SEARCH' | translateAsync" (keyup)="setvalue($event)" class="input" name="text"
+          type="text">
+      </div>
+      <span (click)="navigateTo('book-now')" class="btn btn-primary py-2 px-4 d-none d-xl-inline-block rounded-pill">{{
+        'BOOK_NOW' | translateAsync }}</span>
     </nav>
   </div>
 </div>
