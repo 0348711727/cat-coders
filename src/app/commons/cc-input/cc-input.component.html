@@ -1,0 +1,5 @@
+<div class="inputGroup">
+  <input type="text" [required]="require" autocomplete="on" [type]="type" [placeholder]="placeholder"
+    [(ngModel)]="inputValue" (ngModelChange)="onInputChange.emit($event)" [maxlength]="maxLength">
+  <label *ngIf="name" for="name">{{name | translateAsync}}</label>
+</div>

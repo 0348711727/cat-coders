@@ -1,0 +1,12 @@
+<div class="btn-group" dropdown>
+  <button id="button-animated" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+    [disabled]="isDisabled" aria-controls="dropdown-animated">
+    {{'SELECT_VALUE_DROPDOWN' | translateAsync}}<span class="caret"></span>
+  </button>
+  <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu" role="menu" aria-labelledby="button-animated">
+    <li role="menuitem cursor-pointer" *ngFor="let dropdown of listDropdown; let i=index"
+      (click)="onSelectDropdown.emit(dropdown.value)">
+      {{(dropdown.label)}}
+    </li>
+  </ul>
+</div>

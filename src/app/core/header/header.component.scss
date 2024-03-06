@@ -2,27 +2,74 @@
 @import "../../../styles.scss";
 @include dancing-script(logo, 900); // Replace with actual values
 
+/*** Navbar Start ***/
 .nav-bar {
-  width: 100%;
-  position: sticky;
   top: 0;
-  background-color: $header;
+  position: fixed;
+  background: $header;
+  border-bottom: 1px solid rgba(0, 0, 0, .05);
+
+  a {
+    color: $black;
+    text-decoration: none;
+
+    &:hover {
+      color: $hover;
+    }
+  }
 }
 
-.nav-item {
-  cursor: pointer;
-  display: block;
-  text-align: center;
-  padding: 1rem 1rem 1rem 0;
-  font-size: 1.2rem;
+.navbar .navbar-nav .nav-link {
   font-weight: 500;
-  margin-left: 1.5rem;
+  transition: .5s;
+  display: flex;
 
-  &:checked,
   &.active,
   &:hover {
-    color: $primary !important;
+    color: $hover !important;
   }
+}
+
+// @media (min-width: 1200px) {
+.navbar .nav-item {
+
+  .dropdown-menu {
+    display: flex;
+    visibility: hidden;
+    top: 100%;
+    transform-origin: 0% 0%;
+    transition: .3s;
+    opacity: 1;
+  }
+
+
+
+  &:hover .dropdown-menu,
+  &.nav-link &:hover {
+    visibility: visible;
+    opacity: .8;
+    z-index: 0;
+    animation: slide-in-top .4s cubic-bezier(.25, .46, .45, .94) both;
+  }
+}
+
+// }
+
+.dropdown .dropdown-menu a:hover {
+  background: var(--bs-primary);
+  color: var(--bs-white);
+}
+
+#searchModal .modal-content {
+  background-color: rgba(255, 255, 255, .95);
+}
+
+/*** Navbar End ***/
+
+.nav-item {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-left: .8rem;
 }
 
 /*** Search Input Start ***/
@@ -89,3 +136,63 @@
 }
 
 /*** Search Inpout end ***/
+
+/*** Navbar hover start ***/
+.element {
+  position: absolute;
+  top: 0;
+  background-color: #ffffff;
+  padding: 1rem 0;
+  width: 40rem;
+  transition: .1 ease;
+  border-radius: .375rem;
+  box-shadow: 0px 0px 3px #d6d6d6;
+}
+
+/*** Navbar hover end ***/
+.slide-in-left {
+  animation: slide-in-left .5s cubic-bezier(.25, .46, .45, .94) both
+}
+
+.menu_child {
+  box-sizing: border-box;
+  padding: 1rem;
+  width: 100%;
+  opacity: .8;
+
+  .lv2_title {
+    padding: 0 10rem;
+    width: 100%;
+
+    .child {
+      &:hover {
+        color: $hover;
+      }
+    }
+
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-3rem);
+    opacity: 0
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1
+  }
+}
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(-1rem);
+    opacity: 0
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: .9
+  }
+}

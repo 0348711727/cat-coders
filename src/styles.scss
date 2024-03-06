@@ -35,3 +35,7 @@ ul li {
   padding-top: 6rem;
   padding-bottom: 6rem;
 }
+
+@mixin bg-color-input($bg-color) {
+  background-color: $bg-color;
+}
