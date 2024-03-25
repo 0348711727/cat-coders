@@ -39,3 +39,7 @@ ul li {
 @mixin bg-color-input($bg-color) {
   background-color: $bg-color;
 }
+
+ol li a {
+  text-decoration: none;
+}

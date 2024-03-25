@@ -1,0 +1,28 @@
+@import '../../commons/animation';
+@import '../../commons/variable';
+
+.breadcrumb-item {
+  color: $primary;
+}
+
+.display-1 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3rem;
+}
+
+.bg-light {
+  background-color: $light !important;
+}
+
+:host {
+  .container-fluid .container span {
+    background-color: $primary;
+    color: $dark;
+
+    &:hover {
+      transition: .2s ease-in;
+      background-color: $dark;
+      color: $primary;
+    }
+  }
+}

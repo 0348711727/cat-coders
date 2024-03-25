@@ -12,8 +12,7 @@
         <ul #items class="d-flex jutify-content-between ml-auto navbar-nav">
           <li *ngFor="let navbars of LIST_NAVBAR; let i=index" class="nav-item">
             <a [id]="navbars.id" class="nav-link" [ngClass]="{ 'active': currentUrl === navbars.url}"
-              [routerLink]="navbars.relative ?  [navbars.relative , navbars.url] : [navbars.url]">{{navbars.title |
-              translateAsync}}</a>
+              [routerLink]="[navbars.url]">{{navbars.title | translateAsync}}</a>
             <ul *ngIf="navbars.child && navbars.child.length> 0" class="menu_child dropdown-menu" id="menu_child_3_3"
               [ngStyle]="{ 'left.px': 0}">
               <div class="d-flex m-2 justify-content-between lv2_title">

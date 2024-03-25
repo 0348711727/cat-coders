@@ -33,13 +33,11 @@ export class HeaderComponent implements OnInit {
     private translationService: L10nTranslationService,
     private voiceService: VoiceRecognitionService) {
   }
-  @ViewChild("items") items!: ElementRef;
   LIST_NAVBAR = LIST_NAVBAR;
   showInput: boolean = false;
   searchInput: string = '';
   isMenuOpen: boolean = false;
   isActive: boolean = false;
-  routeMenuLv2: { title: string }[] = [{ title: 'b1' }, { title: 'b2' }, { title: 'b3' }];
   index: number = 0;
   currentUrl: string = '';
 

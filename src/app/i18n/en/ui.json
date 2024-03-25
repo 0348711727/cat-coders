@@ -7,5 +7,8 @@
   "MENU": "Menu",
   "SEARCH": "Search",
   "BOOK_NOW": "Book Now",
-  "SELECT_VALUE_DROPDOWN": "Select Value Dropdown"
+  "SELECT_VALUE_DROPDOWN": "Select Value Dropdown",
+  "PAGE_NOT_FOUND": "Page Not Found",
+  "GO_BACK_TO_HOME": "Go Back To Home",
+  "ERROR_404": "404 Error"
 }

@@ -1,27 +1,31 @@
 <div class="container-fluid py-6 my-6 mt-0">
-  <div class=" row">
-    <div class="col-4">
-      <div class="d-flex flex-column">
-        <div class="lv2_title" (mouseenter)="index = 0">
-          a1
+  <app-cc-carousel></app-cc-carousel>
+  <div class="row">
+    <div class="col-lg-6 col-md-12 col-sm-12 col-12 p-0 menu__item menu__banner pb-4">
+      <a [routerLink]="'/collections/all'" title="Freeship">
+        <img loading="lazy"
+          src="https://file.hstatic.net/1000075078/file/banner_app_f2a5895397a14c4f9d2eb65f7d998990.jpg" alt="product"
+          class="menu__banner-image" />
+      </a>
+    </div>
+    <ng-container *ngFor="let product of products, let i=index">
+
+      <div class="col-lg-3 col-md-6 col-sm-12 col-12 p-0 menu__item">
+        <div class="menu__item-image">
+          <a [routerLink]="'/abc'" title="abc">
+            <img loading="lazy" alt="abc" [src]="product.image" />
+          </a>
         </div>
-        <div class="lv2_title" (mouseenter)="index = 1" (mouseleave)="index = 0">
-          a2
-        </div>
-        <div class="lv2_title" (mouseenter)="index = 2" (mouseleave)="index = 0">
-          a3
+        <div class="menu__item__info">
+          <h3>
+            {{product.title}}
+          </h3>
+          <div class="menu__item__info-price">
+            {{product.price}}
+          </div>
         </div>
       </div>
-    </div>
-    <div class="col-8">
-      <section class="d-flex">
-        <div>
-          {{routeMenuLv2[index].title}}
-        </div>
-        <div class="product_image">
-          <img src="abc.png" [alt]="routeMenuLv2[index].title" />
-        </div>
-      </section>
-    </div>
+    </ng-container>
+
   </div>
 </div>

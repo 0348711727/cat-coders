@@ -11,7 +11,7 @@ export const LIST_NAVBAR: MenuItem[] = [
     ]
   },
   {
-    id: 'menu', title: 'MENU', url: 'all', relative: 'collections', child: [
+    id: 'menu', title: 'MENU', url: 'collections/all', child: [
       { id: 'tat-ca', title: 'ALL', url: 'all' },
       { id: 'xuan-len-di', title: 'SPRING_TEA', url: 'xuan-len-di' },
       {
@@ -32,13 +32,12 @@ export const LIST_NAVBAR: MenuItem[] = [
       { id: 'green-tea', title: 'GREEN_TEA', url: 'green-tea' }
     ]
   },
-  { id: 'contact', title: 'CONTACT', url: 'contact', relative: 'pages', child: [] }
+  { id: 'contact', title: 'CONTACT', url: 'pages/contact', child: [] }
 ];
 interface MenuItem {
   id: string;
   title: string;
   url: string;
-  relative?: string;
   child?: MenuItem[];
   hasChild?: MenuItem[];
 }
